@@ -79,8 +79,13 @@ function checkout() {
   const email = document.getElementById("email").value;
   const address = document.getElementById("address").value;
 
-  if (!email || !address) {
-    alert("Please enter your email and delivery address.");
+  if (!email || !email.includes("@")) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (!address || address.trim().length < 10) {
+    alert("Please enter a valid delivery address (at least 10 characters).");
     return;
   }
 
@@ -89,6 +94,9 @@ function checkout() {
   // Send the order data to the serverless function
   fetch("/.netlify/functions/sendOrder", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
       email: email,
       address: address,
@@ -96,7 +104,12 @@ function checkout() {
       total: totalAmount,
     }),
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
     .then(() => {
       alert(`Payment successful! Your order will be delivered to:\n${address}`);
       order = []; // Clear the order
