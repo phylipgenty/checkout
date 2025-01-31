@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Pizza",
+      "price": 5000,
+      "image": "images/pizza.jpg"
+    },
+    {
+      "name": "Burger",
+      "price": 3500,
+      "image": "images/burger.jpg"
+    },
+    {
+      "name": "Pasta",
+      "price": 4500,
+      "image": "images/pasta.jpg"
+    },
+    {
+      "name": "Salad",
+      "price": 2500,
+      "image": "images/salad.jpg"
+    },
+    {
+      "name": "Sushi",
+      "price": 6000,
+      "image": "images/sushi.jpg"
+    },
+    {
+      "name": "Taco",
+      "price": 2000,
+      "image": "images/taco.jpg"
+    }
+  ]

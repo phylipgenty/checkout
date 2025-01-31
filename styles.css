@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .menu-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .menu-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .menu-item p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .menu-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .menu-item button:hover {
+    background-color: #218838;
+  }
+  
+  #order-summary {
+    margin-top: 20px;
+  }
+  
+  #order-summary p {
+    margin: 5px 0;
+  }
+  
+  #total {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  #checkout-form {
+    margin-top: 20px;
+  }
+  
+  #checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #checkout-form input,
+  #checkout-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #checkout-form textarea {
+    resize: vertical;
+  }
+  
+  #checkout-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  #checkout-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  #checkout-form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
